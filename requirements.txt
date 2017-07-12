@@ -1,0 +1,3 @@
+aiohttp
+sc2reader
+sc2replaysearch
