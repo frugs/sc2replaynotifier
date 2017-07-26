@@ -1,8 +1,6 @@
 import asyncio
 from asyncio import AbstractEventLoop
-from typing import Callable
-
-from sc2reader.resources import Replay
+from typing import Callable, IO
 
 from .gameclient import GameClient
 from .gamefinishedchecker import check_has_game_finished
@@ -14,7 +12,7 @@ class ReplayNotifier:
     def __init__(
             self,
             game_client: GameClient,
-            most_recent_replay_loader: Callable[[], Replay],
+            most_recent_replay_loader: Callable[[], str],
             replay_handler: ReplayHandler,
             event_loop: AbstractEventLoop):
 
